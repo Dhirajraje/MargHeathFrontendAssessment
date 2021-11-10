@@ -1,0 +1,35 @@
+.wrpper-content {
+    display: inline-block;
+    width: 100%;
+    font-family: Roboto;
+  }
+  .heading {
+    display: inline-block;
+    width: 100%;
+    font-size: 2.6rem;
+    line-height: 2.9rem;
+    font-family: Roboto-Medium;
+    margin-bottom: 2rem;
+  }
+  .text {
+    display: inline-block;
+    width: 100%;
+    font-size: 2.3rem;
+    line-height: 2.8rem;
+    font-family: Roboto-Bold;
+  }
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td,
+  th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  .my-pagination{
+text-align: center;
+  }

@@ -3,7 +3,12 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  db: {
+    apiUrl: 'http://localhost:3000/',
+    getAllMedicines: 'GetAll/',
+    uploadFile : 'UploadCSV/'
+  }
 };
 
 /*

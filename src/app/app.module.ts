@@ -1,16 +1,18 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
-@NgModule({
+import { MedicineListComponent } from './medicine-list/medicine-list.component';
+import {NgxPaginationModule} from 'ngx-pagination';@NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MedicineListComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

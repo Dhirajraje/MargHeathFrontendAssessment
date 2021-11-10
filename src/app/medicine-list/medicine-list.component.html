@@ -1,0 +1,38 @@
+
+<div class="wrapper-content">
+    <div class="heading">Marg Health</div>
+    <div class="text">Medicine-List</div>
+    <div><label for="myfile">{{lable}}</label><input type="file" class="upload" (change)="uploadFile($event)"></div>
+    <table>
+      <tr>
+        <th>Sr.No</th>
+        <th>Name</th>
+        <th>Batch Number</th>
+        <th>Expiry Date</th>
+        <th>Balance Quantity</th>
+        <th>Packaging</th>
+        <th>Unique code</th>
+        <th>Schemes</th>
+        <th>MRP</th>
+        <th>Manufacturer</th>
+        <th>HSN Code</th>
+      </tr>
+      <tr *ngFor="let each of allMedicines | paginate: {
+      itemsPerPage: pageSize,
+      currentPage: pageNumber,
+      totalItems:  count }">
+        <td>{{ each.c_name }}</td>
+        <td>{{ each.c_batch_no }}</td>
+        <td>{{ each.d_expiry_date }}</td>
+        <td>{{ each.n_balance_qty }}</td>
+        <td>{{ each.c_packaging }}</td>
+        <td>{{ each.c_unique_code }}</td>
+        <td>{{ each.c_schemes }}</td>
+        <td>{{ each.n_mrp }}</td>
+        <td>{{ each.c_manufacturer }}</td>
+        <td>{{ each.hsn_code }}</td>
+        
+      </tr>
+    </table>
+    <pagination-controls class="my-pagination" (pageChange)="changePage($event)"></pagination-controls>
+  </div>

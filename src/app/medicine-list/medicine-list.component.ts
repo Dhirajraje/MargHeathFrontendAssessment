@@ -22,12 +22,15 @@ export class MedicineListComponent implements OnInit {
       .getAllMedicines(this.pageNumber, this.pageSize)
       .then((resp: any) => {
         console.log(resp);
-        this.allMedicines = resp.data.data;
-        this.count = resp.data.count;
+        this.allMedicines = resp.data.data.docs;
+        this.count = resp.data.data.count;
       });
   }
   changePage(event: any) {
+    console.log(event);
+    
     this.pageNumber = event;
+    this.getAllMedicine();
   }
   uploadFile(event: any) {
     this.lable = 'Uploading file';
